@@ -54,3 +54,11 @@ requires a several pstricks-related packages.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.01-1
++ Revision: 762705
+- texlive-pst-pulley
+- texlive-pst-pulley
+
