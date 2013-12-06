@@ -6,7 +6,7 @@
 # catalog-version 0.01
 Name:		texlive-pst-pulley
 Version:	0.01
-Release:	3
+Release:	4
 Summary:	Plot pulleys, using pstricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-pulley
