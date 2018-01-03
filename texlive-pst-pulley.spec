@@ -1,19 +1,12 @@
-# revision 25142
-# category Package
-# catalog-ctan /graphics/pstricks/contrib/pst-pulley
-# catalog-date 2012-01-18 12:22:27 +0100
-# catalog-license lppl1.3
-# catalog-version 0.01
 Name:		texlive-pst-pulley
-Version:	0.01
-Release:	9
+Version:	0.02
+Release:	1
 Summary:	Plot pulleys, using pstricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-pulley
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -35,30 +28,16 @@ requires a several pstricks-related packages.
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/pst-pulley/pst-pulley.tex
-%{_texmfdistdir}/tex/latex/pst-pulley/pst-pulley.sty
-%doc %{_texmfdistdir}/doc/generic/pst-pulley/Changes
-%doc %{_texmfdistdir}/doc/generic/pst-pulley/README
-%doc %{_texmfdistdir}/doc/generic/pst-pulley/pst-pulley-doc.bib
-%doc %{_texmfdistdir}/doc/generic/pst-pulley/pst-pulley-doc.pdf
-%doc %{_texmfdistdir}/doc/generic/pst-pulley/pst-pulley-doc.tex
-#- source
-%doc %{_texmfdistdir}/source/generic/pst-pulley/Makefile
+%{_texmfdistdir}/tex/generic/pst-pulley
+%{_texmfdistdir}/tex/latex/pst-pulley
+%doc %{_texmfdistdir}/doc/generic/pst-pulley
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 19 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.01-1
-+ Revision: 762705
-- texlive-pst-pulley
-- texlive-pst-pulley
-
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
