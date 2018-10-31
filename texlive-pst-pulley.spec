@@ -1,6 +1,6 @@
 Name:		texlive-pst-pulley
 Version:	0.02
-Release:	1
+Release:	2
 Summary:	Plot pulleys, using pstricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-pulley
