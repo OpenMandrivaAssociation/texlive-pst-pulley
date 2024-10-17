@@ -3,7 +3,7 @@ Version:	62977
 Release:	2
 Summary:	Plot pulleys, using pstricks
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-pulley
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-pulley
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.doc.r%{version}.tar.xz
