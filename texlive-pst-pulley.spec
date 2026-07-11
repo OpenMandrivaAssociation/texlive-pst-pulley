@@ -1,43 +1,23 @@
-Name:		texlive-pst-pulley
-Version:	62977
-Release:	2
-Summary:	Plot pulleys, using pstricks
+%global tl_name pst-pulley
+%global tl_revision 62977
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	0.02
+Release:	%{tl_revision}.1
+Summary:	Plot pulleys, using PSTricks
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-pulley
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.doc.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-pulley.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package enables the user to draw pulley systems with up to
-6 pulleys. The pulley diagrams are labelled with the physical
-properties of the system. The package uses pstricks, and
-requires a several pstricks-related packages.
+The package enables the user to draw pulley systems with up to 6
+pulleys. The pulley diagrams are labelled with the physical properties
+of the system. The package uses pstricks and requires several PSTricks-
+related packages.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/generic/pst-pulley
-%{_texmfdistdir}/tex/latex/pst-pulley
-%doc %{_texmfdistdir}/doc/generic/pst-pulley
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
